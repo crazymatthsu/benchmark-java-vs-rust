@@ -1,4 +1,4 @@
-use crate::c;
+use crate::constants as c;
 use crate::rng::XorShift64;
 
 pub struct Workload {

@@ -2,7 +2,8 @@ use std::fs;
 use std::io::{self, Write};
 use std::path::Path;
 
-use crate::env_info::EnvInfo;
+use crate::env::EnvInfo;
+use crate::harness::percentiles;
 
 pub struct BenchResult {
     pub name: String,
@@ -38,12 +39,12 @@ impl BenchResult {
             elapsed_ns,
             throughput_ops_s: throughput,
             checksum: checksum.to_string(),
-            min_ns: crate::percentiles::min(sorted),
-            p50_ns: crate::percentiles::pct(sorted, 0.50),
-            p90_ns: crate::percentiles::pct(sorted, 0.90),
-            p99_ns: crate::percentiles::pct(sorted, 0.99),
-            p999_ns: crate::percentiles::pct(sorted, 0.999),
-            max_ns: crate::percentiles::max(sorted),
+            min_ns: percentiles::min(sorted),
+            p50_ns: percentiles::pct(sorted, 0.50),
+            p90_ns: percentiles::pct(sorted, 0.90),
+            p99_ns: percentiles::pct(sorted, 0.99),
+            p999_ns: percentiles::pct(sorted, 0.999),
+            max_ns: percentiles::max(sorted),
             stats: Vec::new(),
         }
     }

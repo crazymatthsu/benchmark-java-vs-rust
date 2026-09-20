@@ -1,4 +1,4 @@
-use crate::c;
+use crate::constants as c;
 
 #[derive(Clone)]
 pub struct TickAgg {

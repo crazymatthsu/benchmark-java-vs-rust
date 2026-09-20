@@ -1,6 +1,6 @@
-use crate::c;
+use crate::constants as c;
+use crate::md::agg::TickAgg;
 use crate::rng::XorShift64;
-use crate::tick_agg::TickAgg;
 
 pub struct MarketDataBench {
     pub symbol: Vec<i32>,

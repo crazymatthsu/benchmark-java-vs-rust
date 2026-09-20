@@ -1,4 +1,4 @@
-use crate::c;
+use crate::constants as c;
 use crate::workload::Workload;
 
 #[derive(Clone, Default)]

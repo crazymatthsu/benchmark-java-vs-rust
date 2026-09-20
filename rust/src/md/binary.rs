@@ -1,6 +1,6 @@
-use crate::c;
+use crate::constants as c;
+use crate::md::agg::TickAgg;
 use crate::rng::XorShift64;
-use crate::tick_agg::TickAgg;
 
 pub const REC: usize = 32;
 
@@ -77,7 +77,7 @@ fn read_i64(a: &[u8], o: usize) -> i64 {
 #[cfg(test)]
 mod tests {
     use super::*;
-    use crate::market_data::MarketDataBench;
+    use crate::md::ticks::MarketDataBench;
 
     #[test]
     fn checksum_matches_market_data() {

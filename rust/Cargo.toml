@@ -5,6 +5,14 @@ edition = "2021"
 description = "Equities trading microbenchmarks (Rust)"
 publish = false
 
+[lib]
+name = "rust_bench"
+path = "src/lib.rs"
+
+[[bin]]
+name = "rust-bench"
+path = "src/main.rs"
+
 [profile.release]
 lto = "thin"
 codegen-units = 1

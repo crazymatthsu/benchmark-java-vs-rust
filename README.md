@@ -66,9 +66,17 @@ Those host runs are **not** the published comparison (macOS vs Linux, different 
 ## Layout
 
 ```
-java/     Java 21 Gradle module
-rust/     Cargo binary
-report/   Python charts + HTML
+java/                 Java 21 Gradle module (package com.equities.bench)
+rust/src/
+  lib.rs              crate root
+  main.rs             CLI
+  constants.rs rng.rs workload.rs env.rs
+  book/               matching engine
+  fix/                FIX 4.4 codec
+  risk/               pre-trade risk
+  md/                 tick aggregation + binary records
+  harness/            CLI, timers, JSON
+report/               Python charts + HTML
 benches/SPEC.md
 docker-compose.yml
 run-compose.sh

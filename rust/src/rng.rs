@@ -1,4 +1,4 @@
-use crate::c;
+use crate::constants as c;
 
 pub struct XorShift64 {
     state: u64,

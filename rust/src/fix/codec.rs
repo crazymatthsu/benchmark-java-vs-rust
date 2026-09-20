@@ -1,4 +1,4 @@
-use crate::c;
+use crate::constants as c;
 use crate::rng::XorShift64;
 
 pub struct FixBench {
@@ -110,8 +110,8 @@ fn build_new_order_single(
     );
     let header = format!("8=FIX.4.4\x019={}\x01", body.len());
     let prefix = format!("{header}{body}");
-    let sum: u32 = prefix.bytes().map(|b| u32::from(b)).sum();
-    let msg = format!("{prefix}10={}\x01", pad3((sum % 256) as u32));
+    let sum: u32 = prefix.bytes().map(u32::from).sum();
+    let msg = format!("{prefix}10={}\x01", pad3(sum % 256));
     msg.into_bytes()
 }
 
