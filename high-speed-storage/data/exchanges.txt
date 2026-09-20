@@ -1,0 +1,7 @@
+# filename  pos  type   venue_id
+# type: ALPHA (ASCII ticker) or INT (numeric id)
+# venue_id is XOR'd into an unused high byte of the 64-bit packed symbol
+nasdaq_list.txt 0 ALPHA 1
+nyse_list.txt   0 ALPHA 2
+arca_list.txt   0 INT   3
+mappings.txt    0 ALPHA 1

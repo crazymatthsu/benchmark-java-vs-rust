@@ -1,0 +1,10 @@
+# CQS | NASDAQ-style alias  (same instrument, venue 1)
+BRK.A | BRKA
+BRK.B | BRKB
+BF.B | BFB
+BF.A | BFA
+CWEN.A | CWENA
+HEI.A | HEIA
+MOG.A | MOGA
+LEN.B | LENB
+WSO.B | WSOB

@@ -67,6 +67,7 @@ java/                 Java 21 Gradle module (package com.equities.bench)
 rust/src/             Cargo library + CLI (book, fix, risk, md, harness)
 cpp/src/              C++20 headers + CLI (same module names)
 python/src/equities_bench/   CPython package (same module names)
+high-speed-storage/   US 11,948,192 perfect-hash symbol lookup (C++)
 report/               Python charts + HTML
 benches/SPEC.md
 docker-compose.yml

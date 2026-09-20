@@ -22,6 +22,8 @@ python/**/__pycache__/
 # C++
 cpp/build/
 cpp/cmake-build-*/
+high-speed-storage/build/
+high-speed-storage/cmake-build-*/
 
 # Benchmark outputs (sample report is committed)
 results/*
