@@ -1,0 +1,11 @@
+{
+  "engine": "podman",
+  "engine_version": "podman version 5.8.2",
+  "host_os": "Darwin",
+  "host_arch": "arm64",
+  "command": "./run-compose.sh",
+  "started_utc": "2026-09-20T12:33:54Z",
+  "ops": 1000000,
+  "warmup": 50000,
+  "mode": "default"
+}

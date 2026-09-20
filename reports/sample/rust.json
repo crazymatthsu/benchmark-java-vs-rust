@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "language": "rust",
+  "runtime": "rustc 1.98.1 (48a229cea 2026-09-01)",
+  "os": "linux",
+  "arch": "aarch64",
+  "cpus": 7,
+  "mem_bytes": 6180872192,
+  "os_pretty": "Debian GNU/Linux 12 (bookworm)",
+  "cpu_model": "implementer 0x61 part 0x000",
+  "container_runtime": "podman",
+  "seed": "869193496018642825",
+  "ops": 1000000,
+  "warmup": 50000,
+  "symbols": 32,
+  "accounts": 256,
+  "benchmarks": [
+    {
+      "name": "order-book",
+      "ops": 1000000,
+      "elapsed_ns": 131225923,
+      "throughput_ops_s": 7620445.542608,
+      "checksum": "10370079009306826219",
+      "latency_ns": {
+        "min": 0,
+        "p50": 83,
+        "p90": 209,
+        "p99": 583,
+        "p999": 1292,
+        "max": 86125
+      },
+      "stats": {
+        "fills": 674658,
+        "fill_qty": 17272008,
+        "cancel_hits": 14464,
+        "cancel_misses": 185433,
+        "ioc_killed": 2312432,
+        "resting_adds": 426946
+      }
+    },
+    {
+      "name": "fix-parse",
+      "ops": 1000000,
+      "elapsed_ns": 93372206,
+      "throughput_ops_s": 10709825.148610,
+      "checksum": "17623520319986842022",
+      "latency_ns": {
+        "min": 0,
+        "p50": 83,
+        "p90": 84,
+        "p99": 84,
+        "p999": 125,
+        "max": 105958
+      },
+      "stats": {
+        "messages": 1000000,
+        "bytes": 105197386
+      }
+    },
+    {
+      "name": "risk",
+      "ops": 1000000,
+      "elapsed_ns": 37519883,
+      "throughput_ops_s": 26652535.137170,
+      "checksum": "9855389727056849520",
+      "latency_ns": {
+        "min": 0,
+        "p50": 0,
+        "p90": 42,
+        "p99": 42,
+        "p999": 84,
+        "max": 98417
+      },
+      "stats": {
+        "accepts": 800087,
+        "rejects": 16
+      }
+    },
+    {
+      "name": "market-data",
+      "ops": 1000000,
+      "elapsed_ns": 35175750,
+      "throughput_ops_s": 28428676.005487,
+      "checksum": "16732242006771918902",
+      "latency_ns": {
+        "min": 0,
+        "p50": 0,
+        "p90": 42,
+        "p99": 42,
+        "p999": 42,
+        "max": 102084
+      },
+      "stats": {
+        "ticks": 1000000
+      }
+    },
+    {
+      "name": "binary-md",
+      "ops": 1000000,
+      "elapsed_ns": 34232121,
+      "throughput_ops_s": 29212329.554456,
+      "checksum": "16732242006771918902",
+      "latency_ns": {
+        "min": 0,
+        "p50": 0,
+        "p90": 42,
+        "p99": 42,
+        "p999": 42,
+        "max": 50459
+      },
+      "stats": {
+        "ticks": 1000000,
+        "bytes": 32000000
+      }
+    }
+  ]
+}

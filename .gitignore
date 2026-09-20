@@ -1,0 +1,29 @@
+.idea/
+*.iml
+.DS_Store
+
+# Java
+java/.gradle/
+java/build/
+java/.classpath
+java/.project
+java/.settings/
+
+# Rust
+rust/target/
+rust/**/*.rs.bk
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Benchmark outputs (sample report is committed)
+results/*
+!results/.gitkeep
+reports/*
+!reports/.gitkeep
+!reports/sample/
+!reports/sample/**
+
+*.log

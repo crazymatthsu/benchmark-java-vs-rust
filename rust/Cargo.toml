@@ -1,0 +1,11 @@
+[package]
+name = "rust-bench"
+version = "1.0.0"
+edition = "2021"
+description = "Equities trading microbenchmarks (Rust)"
+publish = false
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
+opt-level = 3

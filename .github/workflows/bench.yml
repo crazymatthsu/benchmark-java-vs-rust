@@ -1,0 +1,35 @@
+name: benchmarks
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "quick or full"
+        default: quick
+        type: choice
+        options: [quick, full]
+
+jobs:
+  linux:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run compose benches
+        run: |
+          chmod +x run-compose.sh java/gradlew java/docker-entrypoint.sh rust/docker-entrypoint.sh
+          if [ "${{ github.event.inputs.mode }}" = "full" ]; then
+            ./run-compose.sh --full
+          else
+            ./run-compose.sh --quick
+          fi
+      - name: Upload reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: benchmark-reports
+          path: |
+            reports/
+            results/
