@@ -19,7 +19,8 @@ jobs:
       - uses: actions/checkout@v4
       - name: Run compose benches
         run: |
-          chmod +x run-compose.sh java/gradlew java/docker-entrypoint.sh rust/docker-entrypoint.sh
+          chmod +x run-compose.sh java/gradlew java/docker-entrypoint.sh rust/docker-entrypoint.sh \
+            cpp/docker-entrypoint.sh python/docker-entrypoint.sh
           if [ "${{ github.event.inputs.mode }}" = "full" ]; then
             ./run-compose.sh --full
           else

@@ -3,9 +3,9 @@
   "engine_version": "podman version 5.8.2",
   "host_os": "Darwin",
   "host_arch": "arm64",
-  "command": "./run-compose.sh",
-  "started_utc": "2026-09-20T12:33:54Z",
-  "ops": 1000000,
-  "warmup": 50000,
-  "mode": "default"
+  "command": "./run-compose.sh --quick",
+  "started_utc": "2026-09-20T15:19:39Z",
+  "ops": 100000,
+  "warmup": 10000,
+  "mode": "quick"
 }

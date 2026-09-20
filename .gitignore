@@ -17,6 +17,11 @@ rust/**/*.rs.bk
 __pycache__/
 *.pyc
 .venv/
+python/**/__pycache__/
+
+# C++
+cpp/build/
+cpp/cmake-build-*/
 
 # Benchmark outputs (sample report is committed)
 results/*

@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
-  "language": "java",
-  "runtime": "OpenJDK 64-Bit Server VM 21.0.12 (21.0.12+8-LTS)",
-  "os": "Linux",
+  "language": "cpp",
+  "runtime": "g++ 12.2.0 (-O3 -flto)",
+  "os": "linux",
   "arch": "aarch64",
   "cpus": 7,
   "mem_bytes": 6180872192,
-  "os_pretty": "Ubuntu 22.04.5 LTS",
+  "os_pretty": "linux aarch64",
   "cpu_model": "implementer 0x61 part 0x000",
   "container_runtime": "podman",
   "seed": "869193496018642825",
@@ -18,16 +18,16 @@
     {
       "name": "order-book",
       "ops": 100000,
-      "elapsed_ns": 18813476,
-      "throughput_ops_s": 5315338.856041,
+      "elapsed_ns": 7318199,
+      "throughput_ops_s": 13664564.191272,
       "checksum": "11039129950677240492",
       "latency_ns": {
         "min": 0,
-        "p50": 83,
-        "p90": 167,
-        "p99": 417,
-        "p999": 32167,
-        "max": 166375
+        "p50": 42,
+        "p90": 84,
+        "p99": 208,
+        "p999": 3500,
+        "max": 33333
       },
       "stats": {
         "fills": 66596,
@@ -41,35 +41,35 @@
     {
       "name": "fix-parse",
       "ops": 100000,
-      "elapsed_ns": 24263718,
-      "throughput_ops_s": 4121379.913829,
+      "elapsed_ns": 8359656,
+      "throughput_ops_s": 11962214.713141,
       "checksum": "13503756755032847095",
       "latency_ns": {
-        "min": 41,
-        "p50": 209,
-        "p90": 250,
-        "p99": 334,
-        "p999": 3000,
-        "max": 76542
+        "min": 0,
+        "p50": 83,
+        "p90": 84,
+        "p99": 84,
+        "p999": 125,
+        "max": 36000
       },
       "stats": {
         "messages": 100000,
-        "bytes": 10319875
+        "bytes": 10219875
       }
     },
     {
       "name": "risk",
       "ops": 100000,
-      "elapsed_ns": 6403200,
-      "throughput_ops_s": 15617191.404298,
+      "elapsed_ns": 3649871,
+      "throughput_ops_s": 27398228.594928,
       "checksum": "3942293045245061143",
       "latency_ns": {
         "min": 0,
-        "p50": 42,
-        "p90": 83,
-        "p99": 84,
-        "p999": 167,
-        "max": 65125
+        "p50": 0,
+        "p90": 42,
+        "p99": 42,
+        "p999": 42,
+        "max": 28917
       },
       "stats": {
         "accepts": 79948,
@@ -79,16 +79,16 @@
     {
       "name": "market-data",
       "ops": 100000,
-      "elapsed_ns": 5375743,
-      "throughput_ops_s": 18602079.749720,
+      "elapsed_ns": 3427162,
+      "throughput_ops_s": 29178661.528110,
       "checksum": "8950761295032626844",
       "latency_ns": {
         "min": 0,
-        "p50": 41,
+        "p50": 0,
         "p90": 42,
         "p99": 42,
-        "p999": 84,
-        "max": 62125
+        "p999": 42,
+        "max": 37792
       },
       "stats": {
         "ticks": 100000
@@ -97,16 +97,16 @@
     {
       "name": "binary-md",
       "ops": 100000,
-      "elapsed_ns": 5305827,
-      "throughput_ops_s": 18847203.272930,
+      "elapsed_ns": 3289746,
+      "throughput_ops_s": 30397483.574720,
       "checksum": "8950761295032626844",
       "latency_ns": {
         "min": 0,
-        "p50": 41,
+        "p50": 0,
         "p90": 42,
         "p99": 42,
-        "p999": 84,
-        "max": 42208
+        "p999": 42,
+        "max": 34125
       },
       "stats": {
         "ticks": 100000,

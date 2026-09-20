@@ -36,6 +36,40 @@ services:
       CONTAINER_RUNTIME: ${CONTAINER_RUNTIME:-docker}
       JAVA_TOOL_OPTIONS: "-Xms1g -Xmx1g -XX:+AlwaysPreTouch -XX:+UseG1GC -XX:MaxGCPauseMillis=20"
 
+  cpp-bench:
+    build:
+      context: ./cpp
+    image: equities-cpp-bench:local
+    mem_limit: 1g
+    volumes:
+      - ./results:/results
+    environment:
+      OUTPUT: /results/cpp.json
+      BENCH_OPS: ${BENCH_OPS:-1000000}
+      BENCH_WARMUP: ${BENCH_WARMUP:-50000}
+      BENCH_SEED: ${BENCH_SEED:-0x0C0FFEE123456789}
+      BENCH_SYMBOLS: ${BENCH_SYMBOLS:-32}
+      BENCH_ACCOUNTS: ${BENCH_ACCOUNTS:-256}
+      BENCH_FILTER: ${BENCH_FILTER:-all}
+      CONTAINER_RUNTIME: ${CONTAINER_RUNTIME:-docker}
+
+  python-bench:
+    build:
+      context: ./python
+    image: equities-python-bench:local
+    mem_limit: 1g
+    volumes:
+      - ./results:/results
+    environment:
+      OUTPUT: /results/python.json
+      BENCH_OPS: ${BENCH_OPS:-1000000}
+      BENCH_WARMUP: ${BENCH_WARMUP:-50000}
+      BENCH_SEED: ${BENCH_SEED:-0x0C0FFEE123456789}
+      BENCH_SYMBOLS: ${BENCH_SYMBOLS:-32}
+      BENCH_ACCOUNTS: ${BENCH_ACCOUNTS:-256}
+      BENCH_FILTER: ${BENCH_FILTER:-all}
+      CONTAINER_RUNTIME: ${CONTAINER_RUNTIME:-docker}
+
   report:
     build:
       context: ./report

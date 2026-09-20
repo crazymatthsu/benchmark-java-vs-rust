@@ -1,8 +1,8 @@
 # Equities benchmark specification
 
-Java 21 and Rust implement this spec line-for-line. Timed loops, PRNG, matching
-rules, and checksum mixing must match so a checksum mismatch is a bug, not a
-language difference.
+Java 21, Rust, C++, and CPython implement this spec line-for-line. Timed loops,
+PRNG, matching rules, and checksum mixing must match so a checksum mismatch is a
+bug, not a language difference.
 
 ## Goals
 
@@ -27,6 +27,8 @@ I/O, networking, persistence, and multi-thread scaling are out of scope.
 - Checksums printed as **unsigned decimal strings** (JSON numbers lose u64 precision).
 - Java: HotSpot 21, G1, fixed heap, `AlwaysPreTouch`.
 - Rust: `--release`, thin LTO, `codegen-units = 1`. Default hasher is unused; IDs are dense arrays.
+- C++: g++ `-O3 -flto`, C++20, dense arrays / `std::vector`.
+- Python: CPython 3.12 (no JIT). Same algorithms; interpreter overhead is part of the result. Python ints wrap with `& (2**64-1)` for checksums.
 
 ## Constants
 
